@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: red; /* Для проверки, меняется ли цвет заголовка */
+}
+.json-tree {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.json-tree li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+.json-tree .children {
+    display: none;
+    margin-left: 20px;
+}
+.json-tree .node:before {
+    content: "▶"; /* Стрелка указывает на сворачивание */
+    display: inline-block;
+    margin-right: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+.json-tree .expanded:before {
+    transform: rotate(90deg); /* Повернутая стрелка указывает на разворачивание */
+}
+
+/* Стиль для кнопки */
+#submitButton {
+    background-color: #28a745 !important;;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+/* Эффект наведения на кнопку */
+#submitButton:hover {
+    background-color: #218838;
+}
